@@ -1,0 +1,389 @@
+[
+  {
+    "name": "finance_exchange_rates",
+    "title": "查询参考汇率",
+    "description": "通过 Frankfurter 查询欧洲央行来源的最新或指定日期参考汇率，无需厂商 API Key。返回实际日期和兑换方向；这是日度参考价，非实时交易价。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "base": {
+          "type": "string",
+          "pattern": "^[A-Za-z]{3}$",
+          "default": "USD"
+        },
+        "quotes": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "pattern": "^[A-Za-z]{3}$"
+          },
+          "minItems": 1,
+          "maxItems": 10,
+          "default": [
+            "CNY",
+            "EUR"
+          ]
+        },
+        "date": {
+          "type": "string",
+          "format": "date"
+        }
+      },
+      "required": [],
+      "additionalProperties": false
+    },
+    "annotations": {
+      "readOnlyHint": true,
+      "destructiveHint": false,
+      "idempotentHint": true,
+      "openWorldHint": true
+    }
+  },
+  {
+    "name": "finance_macro_indicator",
+    "title": "查询年度宏观指标",
+    "description": "查询世界银行 WDI 年度指标：GDP、GDP 增速、人均 GDP、消费物价增速、ILO 模型失业率或总人口。国家用 CHN、USA 等代码。保留单位、统计年份、修订日期与缺失值，不提供预测。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "country": {
+          "type": "string",
+          "pattern": "^[A-Za-z]{2,3}$"
+        },
+        "indicator": {
+          "type": "string",
+          "enum": [
+            "NY.GDP.MKTP.CD",
+            "NY.GDP.MKTP.KD.ZG",
+            "NY.GDP.PCAP.CD",
+            "FP.CPI.TOTL.ZG",
+            "SL.UEM.TOTL.ZS",
+            "SP.POP.TOTL"
+          ]
+        },
+        "start_year": {
+          "type": "integer",
+          "minimum": 1960,
+          "maximum": 2100
+        },
+        "end_year": {
+          "type": "integer",
+          "minimum": 1960,
+          "maximum": 2100
+        }
+      },
+      "required": [
+        "country",
+        "indicator",
+        "start_year",
+        "end_year"
+      ],
+      "additionalProperties": false
+    },
+    "annotations": {
+      "readOnlyHint": true,
+      "destructiveHint": false,
+      "idempotentHint": true,
+      "openWorldHint": true
+    }
+  },
+  {
+    "name": "finance_sources_status",
+    "title": "查看数据来源",
+    "description": "查看腾讯、新浪及接口适配的配置状态，单列已停用的 efinance 日线路径和待接通的 BaoStock。也包含宏观与汇率来源；配置不代表实时可用。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": [],
+      "additionalProperties": false
+    },
+    "annotations": {
+      "readOnlyHint": true,
+      "destructiveHint": false,
+      "idempotentHint": true,
+      "openWorldHint": true
+    }
+  },
+  {
+    "name": "finance_multi_source_history",
+    "title": "多来源历史行情",
+    "description": "按指定来源查询同一沪深 A 股的日线。返回每个来源的实际状态、底层数据源、日期、复权口径与原始数据。不复权默认腾讯与新浪，复权默认腾讯；未接通来源不进入默认查询。来源失败时保留状态，不编造补齐。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "symbol": {
+          "type": "string"
+        },
+        "start_date": {
+          "type": "string",
+          "format": "date"
+        },
+        "end_date": {
+          "type": "string",
+          "format": "date"
+        },
+        "adjust": {
+          "type": "string",
+          "enum": [
+            "none",
+            "qfq",
+            "hfq"
+          ],
+          "default": "none"
+        },
+        "providers": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "tencent",
+              "sina",
+              "akshare",
+              "ashare",
+              "baostock"
+            ]
+          },
+          "minItems": 1,
+          "maxItems": 5
+        },
+        "limit": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 500,
+          "default": 100
+        },
+        "offset": {
+          "type": "integer",
+          "minimum": 0,
+          "default": 0
+        }
+      },
+      "required": [
+        "symbol",
+        "start_date",
+        "end_date"
+      ],
+      "additionalProperties": false
+    },
+    "annotations": {
+      "readOnlyHint": true,
+      "destructiveHint": false,
+      "idempotentHint": true,
+      "openWorldHint": true
+    }
+  },
+  {
+    "name": "finance_compare_history",
+    "title": "交叉核对历史行情",
+    "description": "比较同一沪深 A 股、同日期、同复权和币种的日线开高低收，列出差异。AKShare 适配与腾讯共源，Ashare 与新浪共源，都不重复计为独立验证。无重叠或不足两种实际来源时明确说明。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "symbol": {
+          "type": "string"
+        },
+        "start_date": {
+          "type": "string",
+          "format": "date"
+        },
+        "end_date": {
+          "type": "string",
+          "format": "date"
+        },
+        "adjust": {
+          "type": "string",
+          "enum": [
+            "none",
+            "qfq",
+            "hfq"
+          ],
+          "default": "none"
+        },
+        "providers": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "tencent",
+              "sina",
+              "akshare",
+              "ashare",
+              "baostock"
+            ]
+          },
+          "minItems": 1,
+          "maxItems": 5
+        },
+        "limit": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 500,
+          "default": 100
+        },
+        "offset": {
+          "type": "integer",
+          "minimum": 0,
+          "default": 0
+        }
+      },
+      "required": [
+        "symbol",
+        "start_date",
+        "end_date"
+      ],
+      "additionalProperties": false
+    },
+    "annotations": {
+      "readOnlyHint": true,
+      "destructiveHint": false,
+      "idempotentHint": true,
+      "openWorldHint": true
+    }
+  },
+  {
+    "name": "akshare_service_status",
+    "title": "检查服务状态",
+    "description": "查看本站支持的查询范围、数据源及运行方式。本站是常用接口适配版，完整 AKShare Python 库未在此运行。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": [],
+      "additionalProperties": false
+    },
+    "annotations": {
+      "readOnlyHint": true,
+      "destructiveHint": false,
+      "idempotentHint": true,
+      "openWorldHint": true
+    }
+  },
+  {
+    "name": "akshare_search_securities",
+    "title": "搜索证券",
+    "description": "通过腾讯按名称或代码搜索沪深京证券，返回名称、带市场前缀的代码、类型与市场。名称对应多只证券时，请让用户确认。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "keyword": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 40
+        },
+        "limit": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 20,
+          "default": 10
+        }
+      },
+      "required": [
+        "keyword"
+      ],
+      "additionalProperties": false
+    },
+    "annotations": {
+      "readOnlyHint": true,
+      "destructiveHint": false,
+      "idempotentHint": true,
+      "openWorldHint": true
+    }
+  },
+  {
+    "name": "akshare_stock_quotes",
+    "title": "查询行情快照",
+    "description": "查询沪深京证券、ETF 或指数的最新可用行情。单次最多 20 个代码；指数请带市场前缀，如 sh000001。数据可能延迟，以返回的行情时间和单位为准。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "symbols": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "minItems": 1,
+          "maxItems": 20
+        }
+      },
+      "required": [
+        "symbols"
+      ],
+      "additionalProperties": false
+    },
+    "annotations": {
+      "readOnlyHint": true,
+      "destructiveHint": false,
+      "idempotentHint": true,
+      "openWorldHint": true
+    }
+  },
+  {
+    "name": "akshare_stock_history",
+    "title": "查询历史日线",
+    "description": "按证券代码、日期范围和复权方式查询历史日线。支持沪深证券、ETF 和部分指数，北交所是否可用取决于数据源。单次最多六个自然年，支持分页；请保留返回的原始单位说明。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {
+        "symbol": {
+          "type": "string"
+        },
+        "start_date": {
+          "type": "string",
+          "format": "date"
+        },
+        "end_date": {
+          "type": "string",
+          "format": "date"
+        },
+        "adjust": {
+          "type": "string",
+          "enum": [
+            "none",
+            "qfq",
+            "hfq"
+          ],
+          "default": "none"
+        },
+        "limit": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 500,
+          "default": 200
+        },
+        "offset": {
+          "type": "integer",
+          "minimum": 0,
+          "default": 0
+        }
+      },
+      "required": [
+        "symbol",
+        "start_date",
+        "end_date"
+      ],
+      "additionalProperties": false
+    },
+    "annotations": {
+      "readOnlyHint": true,
+      "destructiveHint": false,
+      "idempotentHint": true,
+      "openWorldHint": true
+    }
+  },
+  {
+    "name": "akshare_market_indices",
+    "title": "查询主要指数",
+    "description": "查询上证指数、深证成指、创业板指、沪深 300 与中证 500 的最新可用快照。显示数据源时间，适合查看市场整体变化。",
+    "inputSchema": {
+      "type": "object",
+      "properties": {},
+      "required": [],
+      "additionalProperties": false
+    },
+    "annotations": {
+      "readOnlyHint": true,
+      "destructiveHint": false,
+      "idempotentHint": true,
+      "openWorldHint": true
+    }
+  }
+]

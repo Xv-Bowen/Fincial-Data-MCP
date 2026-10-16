@@ -1,0 +1,7 @@
+fastapi==0.143.0
+uvicorn==0.54.0
+akshare==1.19.1
+efinance==0.5.9
+baostock==0.9.4
+pandas==3.0.6
+requests==2.34.2

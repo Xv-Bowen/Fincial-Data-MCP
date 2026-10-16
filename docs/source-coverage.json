@@ -1,0 +1,753 @@
+{
+  "scope": "Current application tracked source snapshot; old Git history and retired independent deployments are not part of the release.",
+  "source_file_count": 149,
+  "unaccounted_files": 0,
+  "files": [
+    {
+      "source_path": ".env.example",
+      "public_path": ".env.example",
+      "status": "reviewed_or_sanitized"
+    },
+    {
+      "source_path": ".gitignore",
+      "public_path": ".gitignore",
+      "status": "reviewed_or_sanitized"
+    },
+    {
+      "source_path": ".npmrc",
+      "public_path": ".npmrc",
+      "status": "unchanged"
+    },
+    {
+      "source_path": ".openai/hosting.json",
+      "public_path": ".openai/hosting.json",
+      "status": "reviewed_or_sanitized"
+    },
+    {
+      "source_path": "NOTICE",
+      "public_path": "NOTICE",
+      "status": "reviewed_or_sanitized"
+    },
+    {
+      "source_path": "README.md",
+      "public_path": "README.md",
+      "status": "reviewed_or_sanitized"
+    },
+    {
+      "source_path": "app/.well-known/oauth-authorization-server/api/oauth/route.ts",
+      "public_path": "app/.well-known/oauth-authorization-server/api/oauth/route.ts",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "app/.well-known/oauth-protected-resource/api/mcp/route.ts",
+      "public_path": "app/.well-known/oauth-protected-resource/api/mcp/route.ts",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "app/api/mcp/route.ts",
+      "public_path": "app/api/mcp/route.ts",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "app/api/oauth/.well-known/oauth-authorization-server/route.ts",
+      "public_path": "app/api/oauth/.well-known/oauth-authorization-server/route.ts",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "app/api/oauth/.well-known/openid-configuration/route.ts",
+      "public_path": "app/api/oauth/.well-known/openid-configuration/route.ts",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "app/api/oauth/[...path]/route.ts",
+      "public_path": "app/api/oauth/[...path]/route.ts",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "app/api/query/route.ts",
+      "public_path": "app/api/query/route.ts",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "app/api/status/route.ts",
+      "public_path": "app/api/status/route.ts",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "app/chatgpt-auth.ts",
+      "public_path": "app/chatgpt-auth.ts",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "app/components.tsx",
+      "public_path": "app/components.tsx",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "app/globals.css",
+      "public_path": "app/globals.css",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "app/layout.tsx",
+      "public_path": "app/layout.tsx",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "app/mcp/route.ts",
+      "public_path": "app/mcp/route.ts",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "app/oauth-connection.tsx",
+      "public_path": "app/oauth-connection.tsx",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "app/page.tsx",
+      "public_path": "app/page.tsx",
+      "status": "reviewed_or_sanitized"
+    },
+    {
+      "source_path": "build/connector-preview-plugin.mjs",
+      "public_path": "build/connector-preview-plugin.mjs",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "build/connector-preview-worker.mjs",
+      "public_path": "build/connector-preview-worker.mjs",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "build/sites-vite-plugin.LICENSE",
+      "public_path": "build/sites-vite-plugin.LICENSE",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "build/sites-vite-plugin.ts",
+      "public_path": "build/sites-vite-plugin.ts",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "build/sites-worker.ts",
+      "public_path": "build/sites-worker.ts",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "cloudflare-env.d.ts",
+      "public_path": "cloudflare-env.d.ts",
+      "status": "reviewed_or_sanitized"
+    },
+    {
+      "source_path": "components.json",
+      "public_path": "components.json",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "components/connector-error.tsx",
+      "public_path": "components/connector-error.tsx",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "components/ui/accordion.tsx",
+      "public_path": "components/ui/accordion.tsx",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "components/ui/alert-dialog.tsx",
+      "public_path": "components/ui/alert-dialog.tsx",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "components/ui/alert.tsx",
+      "public_path": "components/ui/alert.tsx",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "components/ui/aspect-ratio.tsx",
+      "public_path": "components/ui/aspect-ratio.tsx",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "components/ui/attachment.tsx",
+      "public_path": "components/ui/attachment.tsx",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "components/ui/avatar.tsx",
+      "public_path": "components/ui/avatar.tsx",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "components/ui/badge.tsx",
+      "public_path": "components/ui/badge.tsx",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "components/ui/breadcrumb.tsx",
+      "public_path": "components/ui/breadcrumb.tsx",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "components/ui/bubble.tsx",
+      "public_path": "components/ui/bubble.tsx",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "components/ui/button-group.tsx",
+      "public_path": "components/ui/button-group.tsx",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "components/ui/button.tsx",
+      "public_path": "components/ui/button.tsx",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "components/ui/calendar.tsx",
+      "public_path": "components/ui/calendar.tsx",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "components/ui/card.tsx",
+      "public_path": "components/ui/card.tsx",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "components/ui/carousel.tsx",
+      "public_path": "components/ui/carousel.tsx",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "components/ui/chart.tsx",
+      "public_path": "components/ui/chart.tsx",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "components/ui/checkbox.tsx",
+      "public_path": "components/ui/checkbox.tsx",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "components/ui/collapsible.tsx",
+      "public_path": "components/ui/collapsible.tsx",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "components/ui/combobox.tsx",
+      "public_path": "components/ui/combobox.tsx",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "components/ui/command.tsx",
+      "public_path": "components/ui/command.tsx",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "components/ui/context-menu.tsx",
+      "public_path": "components/ui/context-menu.tsx",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "components/ui/dialog.tsx",
+      "public_path": "components/ui/dialog.tsx",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "components/ui/direction.tsx",
+      "public_path": "components/ui/direction.tsx",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "components/ui/drawer.tsx",
+      "public_path": "components/ui/drawer.tsx",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "components/ui/dropdown-menu.tsx",
+      "public_path": "components/ui/dropdown-menu.tsx",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "components/ui/empty.tsx",
+      "public_path": "components/ui/empty.tsx",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "components/ui/field.tsx",
+      "public_path": "components/ui/field.tsx",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "components/ui/form.tsx",
+      "public_path": "components/ui/form.tsx",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "components/ui/hover-card.tsx",
+      "public_path": "components/ui/hover-card.tsx",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "components/ui/input-group.tsx",
+      "public_path": "components/ui/input-group.tsx",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "components/ui/input-otp.tsx",
+      "public_path": "components/ui/input-otp.tsx",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "components/ui/input.tsx",
+      "public_path": "components/ui/input.tsx",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "components/ui/item.tsx",
+      "public_path": "components/ui/item.tsx",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "components/ui/kbd.tsx",
+      "public_path": "components/ui/kbd.tsx",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "components/ui/label.tsx",
+      "public_path": "components/ui/label.tsx",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "components/ui/marker.tsx",
+      "public_path": "components/ui/marker.tsx",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "components/ui/menubar.tsx",
+      "public_path": "components/ui/menubar.tsx",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "components/ui/message-scroller.tsx",
+      "public_path": "components/ui/message-scroller.tsx",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "components/ui/message.tsx",
+      "public_path": "components/ui/message.tsx",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "components/ui/native-select.tsx",
+      "public_path": "components/ui/native-select.tsx",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "components/ui/navigation-menu.tsx",
+      "public_path": "components/ui/navigation-menu.tsx",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "components/ui/pagination.tsx",
+      "public_path": "components/ui/pagination.tsx",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "components/ui/popover.tsx",
+      "public_path": "components/ui/popover.tsx",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "components/ui/progress.tsx",
+      "public_path": "components/ui/progress.tsx",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "components/ui/radio-group.tsx",
+      "public_path": "components/ui/radio-group.tsx",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "components/ui/resizable.tsx",
+      "public_path": "components/ui/resizable.tsx",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "components/ui/scroll-area.tsx",
+      "public_path": "components/ui/scroll-area.tsx",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "components/ui/select.tsx",
+      "public_path": "components/ui/select.tsx",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "components/ui/separator.tsx",
+      "public_path": "components/ui/separator.tsx",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "components/ui/sheet.tsx",
+      "public_path": "components/ui/sheet.tsx",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "components/ui/sidebar.tsx",
+      "public_path": "components/ui/sidebar.tsx",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "components/ui/skeleton.tsx",
+      "public_path": "components/ui/skeleton.tsx",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "components/ui/slider.tsx",
+      "public_path": "components/ui/slider.tsx",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "components/ui/sonner.tsx",
+      "public_path": "components/ui/sonner.tsx",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "components/ui/spinner.tsx",
+      "public_path": "components/ui/spinner.tsx",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "components/ui/switch.tsx",
+      "public_path": "components/ui/switch.tsx",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "components/ui/table.tsx",
+      "public_path": "components/ui/table.tsx",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "components/ui/tabs.tsx",
+      "public_path": "components/ui/tabs.tsx",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "components/ui/textarea.tsx",
+      "public_path": "components/ui/textarea.tsx",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "components/ui/toggle-group.tsx",
+      "public_path": "components/ui/toggle-group.tsx",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "components/ui/toggle.tsx",
+      "public_path": "components/ui/toggle.tsx",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "components/ui/tooltip.tsx",
+      "public_path": "components/ui/tooltip.tsx",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "db/index.ts",
+      "public_path": "db/index.ts",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "db/schema.ts",
+      "public_path": "db/schema.ts",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "drizzle.config.ts",
+      "public_path": "drizzle.config.ts",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "drizzle/0000_crazy_black_panther.sql",
+      "public_path": "drizzle/0000_crazy_black_panther.sql",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "drizzle/meta/0000_snapshot.json",
+      "public_path": "drizzle/meta/0000_snapshot.json",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "drizzle/meta/_journal.json",
+      "public_path": "drizzle/meta/_journal.json",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "eslint.config.mjs",
+      "public_path": "eslint.config.mjs",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "examples/d1/app/api/notes/route.ts",
+      "public_path": "examples/d1/app/api/notes/route.ts",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "examples/d1/db/schema.ts",
+      "public_path": "examples/d1/db/schema.ts",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "hooks/use-mobile.ts",
+      "public_path": "hooks/use-mobile.ts",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "lib/client-permissions.ts",
+      "public_path": "lib/client-permissions.ts",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "lib/connector-context.ts",
+      "public_path": "lib/connector-context.ts",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "lib/connector-contract.mts",
+      "public_path": "lib/connector-contract.mts",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "lib/connector-errors.mts",
+      "public_path": "lib/connector-errors.mts",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "lib/connector-preview.d.ts",
+      "public_path": "lib/connector-preview.d.ts",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "lib/connectors.ts",
+      "public_path": "lib/connectors.ts",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "lib/extras.ts",
+      "public_path": "lib/extras.ts",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "lib/market.ts",
+      "public_path": "lib/market.ts",
+      "status": "reviewed_or_sanitized"
+    },
+    {
+      "source_path": "lib/mcp-client.ts",
+      "public_path": "lib/mcp-client.ts",
+      "status": "reviewed_or_sanitized"
+    },
+    {
+      "source_path": "lib/mcp-handler.ts",
+      "public_path": "lib/mcp-handler.ts",
+      "status": "reviewed_or_sanitized"
+    },
+    {
+      "source_path": "lib/mcp-oauth.ts",
+      "public_path": "lib/mcp-oauth.ts",
+      "status": "reviewed_or_sanitized"
+    },
+    {
+      "source_path": "lib/multi.ts",
+      "public_path": "lib/multi.ts",
+      "status": "reviewed_or_sanitized"
+    },
+    {
+      "source_path": "lib/oauth-crypto.ts",
+      "public_path": "lib/oauth-crypto.ts",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "lib/owner-access.ts",
+      "public_path": "lib/owner-access.ts",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "lib/site-config.ts",
+      "public_path": "lib/site-config.ts",
+      "status": "reviewed_or_sanitized"
+    },
+    {
+      "source_path": "lib/utils.ts",
+      "public_path": "lib/utils.ts",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "next.config.ts",
+      "public_path": "next.config.ts",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "package.json",
+      "public_path": "package.json",
+      "status": "reviewed_or_sanitized"
+    },
+    {
+      "source_path": "pnpm-lock.yaml",
+      "public_path": "pnpm-lock.yaml",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "pnpm-workspace.yaml",
+      "public_path": "pnpm-workspace.yaml",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "postcss.config.mjs",
+      "public_path": "postcss.config.mjs",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "public/favicon.svg",
+      "public_path": "public/favicon.svg",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "public/file.svg",
+      "public_path": "public/file.svg",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "public/globe.svg",
+      "public_path": "public/globe.svg",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "public/window.svg",
+      "public_path": "public/window.svg",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "python-backend/.env.example",
+      "public_path": "python-backend/.env.example",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "python-backend/Dockerfile",
+      "public_path": "python-backend/Dockerfile",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "python-backend/README.md",
+      "public_path": "python-backend/README.md",
+      "status": "reviewed_or_sanitized"
+    },
+    {
+      "source_path": "python-backend/main.py",
+      "public_path": "python-backend/main.py",
+      "status": "reviewed_or_sanitized"
+    },
+    {
+      "source_path": "python-backend/requirements.txt",
+      "public_path": "python-backend/requirements.txt",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "python-backend/vendor/Ashare.py",
+      "status": "replaced",
+      "public_path": "python-backend/adapters/daily.py",
+      "reason": "No explicit upstream license found; original daily-only adapter preserves both daily operations used by the application."
+    },
+    {
+      "source_path": "scripts/build-verified.sh",
+      "public_path": "scripts/build-verified.sh",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "scripts/connector-preview/connector-preview-session.mjs",
+      "public_path": "scripts/connector-preview/connector-preview-session.mjs",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "scripts/connector-preview/host-binding.mjs",
+      "public_path": "scripts/connector-preview/host-binding.mjs",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "scripts/connector-preview/protocol.mjs",
+      "public_path": "scripts/connector-preview/protocol.mjs",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "scripts/execution-profile.mjs",
+      "public_path": "scripts/execution-profile.mjs",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "scripts/install-ci.mjs",
+      "public_path": "scripts/install-ci.mjs",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "scripts/install-ci.sh",
+      "public_path": "scripts/install-ci.sh",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "scripts/install-pnpm.sh",
+      "public_path": "scripts/install-pnpm.sh",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "scripts/npm-install.mjs",
+      "public_path": "scripts/npm-install.mjs",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "scripts/pnpm-install.mjs",
+      "public_path": "scripts/pnpm-install.mjs",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "scripts/run-framework.mjs",
+      "public_path": "scripts/run-framework.mjs",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "scripts/sites-env.mjs",
+      "public_path": "scripts/sites-env.mjs",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "scripts/sites-env.sh",
+      "public_path": "scripts/sites-env.sh",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "scripts/test-mcp-oauth.mjs",
+      "public_path": "scripts/test-mcp-oauth.mjs",
+      "status": "reviewed_or_sanitized"
+    },
+    {
+      "source_path": "tsconfig.json",
+      "public_path": "tsconfig.json",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "vendor/shadcn-tailwind-4.13.0.LICENSE.md",
+      "public_path": "vendor/shadcn-tailwind-4.13.0.LICENSE.md",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "vendor/shadcn-tailwind-4.13.0.css",
+      "public_path": "vendor/shadcn-tailwind-4.13.0.css",
+      "status": "unchanged"
+    },
+    {
+      "source_path": "vite.config.ts",
+      "public_path": "vite.config.ts",
+      "status": "unchanged"
+    }
+  ]
+}
